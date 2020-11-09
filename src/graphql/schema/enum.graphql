@@ -1,0 +1,12 @@
+scalar Date
+
+enum RoleData {
+  ADMINISTRATOR
+  OPERATOR
+}
+
+enum ENTITY {
+  PRIVEE
+  GOUV
+  ONG
+}

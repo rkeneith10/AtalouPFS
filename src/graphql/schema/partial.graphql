@@ -1,0 +1,23 @@
+type Address {
+  city: String
+  street: String
+  country: String
+}
+
+type Category {
+  name: String
+  description: String
+  parent: String
+}
+
+input categoryInput {
+  name: String
+  description: String
+  parent: String
+}
+
+input addressInput {
+  city: String
+  street: String
+  country: String
+}

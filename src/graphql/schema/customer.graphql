@@ -1,0 +1,38 @@
+type Customer {
+  id: ID!
+  name: String!
+  email: String!
+  entity: String!
+  category: [Category]
+  address: [Address]
+  note: String
+}
+
+input createCustomerInput {
+  name: String!
+  email: String!
+  entity: ENTITY
+  category: [categoryInput]
+  address: [addressInput]
+  note: String
+}
+
+input updateCustomerInput {
+  name: String
+  email: String
+  entity: ENTITY
+  category: [categoryInput]
+  address: [addressInput]
+  note: String
+}
+
+type Query {
+  customers: [Customer!]!
+  customer(id: ID!): Customer!
+}
+
+type Mutation {
+  createCustomer(data: createCustomerInput): Customer!
+  updateCustomer(id: ID!, data: updateCustomerInput): Customer!
+  deleteCustomer(id: ID!): Boolean!
+}
