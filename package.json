@@ -1,0 +1,22 @@
+{
+  "name": "atalouPFS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.19.0",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.4.0",
+    "graphql-resolvers": "^0.4.2",
+    "graphql-tools": "^7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
