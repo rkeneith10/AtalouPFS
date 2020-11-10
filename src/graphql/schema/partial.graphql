@@ -7,13 +7,6 @@ type Address {
 type Category {
   name: String
   description: String
-  parent: String
-}
-
-input categoryInput {
-  name: String
-  description: String
-  parent: String
 }
 
 input addressInput {
