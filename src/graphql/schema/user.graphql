@@ -1,0 +1,32 @@
+type User {
+  id: ID!
+  employe: Employe!
+  username: String!
+  password: String!
+  role: String!
+  status: String
+}
+
+input userInput {
+  employe: ID!
+  username: String!
+  password: String!
+  role: RoleData!
+}
+
+type secureUser {
+  id: ID!
+  employe: Employe!
+  username: String!
+  role: String!
+  status: String
+}
+
+type Query {
+  users: [secureUser!]!
+  user(id: ID!): secureUser
+}
+
+type Mutation {
+  createUser(data: userInput): secureUser!
+}
