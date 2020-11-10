@@ -14,19 +14,30 @@ input userInput {
   role: RoleData!
 }
 
-type secureUser {
-  id: ID!
-  employe: Employe!
+input UserSignInInput {
   username: String!
-  role: String!
-  status: String
+  password: String!
+}
+
+input UserEditInput {
+  oldpassword: String
+  newpassword: String
+  confirmpassword: String
+}
+
+type Token {
+  token: String!
 }
 
 type Query {
-  users: [secureUser!]!
-  user(id: ID!): secureUser
+  users: [User!]!
+  user(id: ID!): User
 }
 
 type Mutation {
-  createUser(data: userInput): secureUser!
+  createUser(data: userInput): Token!
+  signIn(credentials: UserSignInInput): Token!
+  changePassword(data: UserEditInput!): User!
+  deleteUser(id: ID!): Boolean!
+  changeStatus(id: ID!): User!
 }

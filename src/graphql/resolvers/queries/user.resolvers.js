@@ -8,9 +8,9 @@ module.exports = {
     },
   },
   User: {
-    // employe: async (user, args, { models }) => {
-    //   return await models.Employe.findById(user.employe);
-    // },
+    employe: async (user, args, { models }) => {
+      return await models.Employe.findById(user.employe);
+    },
     // displays: async (user, args, { models }) => {
     //   return await models.Display.find({ author: user.id });
     // },

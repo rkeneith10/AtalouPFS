@@ -13,7 +13,7 @@ const userSchema = new Schema(
     username: { type: String, unique: true, lowercase: true, trim: true },
     password: String,
     role: { type: String, enum: values },
-    status: { type: String, default: "Active" },
+    status: { type: String, enum: ['Active', 'Inactive'], default: "Active" },
   },
   {
     timestamps: true,

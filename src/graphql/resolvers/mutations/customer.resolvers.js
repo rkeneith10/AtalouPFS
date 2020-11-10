@@ -12,7 +12,7 @@ module.exports = {
         { new: true }
       );
     },
-    deleteCustomer: async (parent, { id, data }, { models }) => {
+    deleteCustomer: async (parent, { id }, { models }) => {
       return await models.Customer.findByIdAndDelete(id).then((doc) =>
         doc ? true : false
       );
